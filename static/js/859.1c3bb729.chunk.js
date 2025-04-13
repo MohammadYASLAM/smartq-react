@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksmartq_react=self.webpackChunksmartq_react||[]).push([[859],{859:(e,a,s)=>{s.r(a),s.d(a,{default:()=>m});var t=s(43),r=s(662),c=s(579);const m=()=>{const e=(0,r.Zp)();return(0,t.useEffect)((()=>{const a=setTimeout((()=>{e("/auth")}),5e3);return()=>clearTimeout(a)}),[e]),(0,c.jsx)("div",{className:"landing-page",children:(0,c.jsx)("img",{src:"/smartq-react/images/smartq-logo.png",alt:"SmartQ Logo",className:"logo-image"})})}}}]);
+//# sourceMappingURL=859.1c3bb729.chunk.js.map

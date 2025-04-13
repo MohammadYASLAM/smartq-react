@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunksmartq_react=self.webpackChunksmartq_react||[]).push([[369],{369:(e,s,r)=>{r.r(s),r.d(s,{default:()=>n});r(43);var a=r(579);const n=()=>(0,a.jsxs)("div",{className:"container",children:[(0,a.jsx)("h2",{children:"Sorry, the queue does not exist anymore :("}),(0,a.jsx)("p",{children:"Try scanning another QR code."})]})}}]);
+//# sourceMappingURL=369.6838606b.chunk.js.map
