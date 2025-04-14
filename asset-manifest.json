@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/smartq-react/static/css/main.ba7b9bf3.css",
-    "main.js": "/smartq-react/static/js/main.a33aa906.js",
+    "main.js": "/smartq-react/static/js/main.c4318d6d.js",
     "static/js/859.1c3bb729.chunk.js": "/smartq-react/static/js/859.1c3bb729.chunk.js",
     "static/js/146.0a9a33b3.chunk.js": "/smartq-react/static/js/146.0a9a33b3.chunk.js",
-    "static/js/358.8d488efe.chunk.js": "/smartq-react/static/js/358.8d488efe.chunk.js",
+    "static/js/358.5623b232.chunk.js": "/smartq-react/static/js/358.5623b232.chunk.js",
     "static/js/350.ecee73b1.chunk.js": "/smartq-react/static/js/350.ecee73b1.chunk.js",
     "static/js/816.ced3b516.chunk.js": "/smartq-react/static/js/816.ced3b516.chunk.js",
     "static/js/102.001fdd16.chunk.js": "/smartq-react/static/js/102.001fdd16.chunk.js",
@@ -15,10 +15,10 @@
     "static/js/614.064dbf27.chunk.js": "/smartq-react/static/js/614.064dbf27.chunk.js",
     "index.html": "/smartq-react/index.html",
     "main.ba7b9bf3.css.map": "/smartq-react/static/css/main.ba7b9bf3.css.map",
-    "main.a33aa906.js.map": "/smartq-react/static/js/main.a33aa906.js.map",
+    "main.c4318d6d.js.map": "/smartq-react/static/js/main.c4318d6d.js.map",
     "859.1c3bb729.chunk.js.map": "/smartq-react/static/js/859.1c3bb729.chunk.js.map",
     "146.0a9a33b3.chunk.js.map": "/smartq-react/static/js/146.0a9a33b3.chunk.js.map",
-    "358.8d488efe.chunk.js.map": "/smartq-react/static/js/358.8d488efe.chunk.js.map",
+    "358.5623b232.chunk.js.map": "/smartq-react/static/js/358.5623b232.chunk.js.map",
     "350.ecee73b1.chunk.js.map": "/smartq-react/static/js/350.ecee73b1.chunk.js.map",
     "816.ced3b516.chunk.js.map": "/smartq-react/static/js/816.ced3b516.chunk.js.map",
     "102.001fdd16.chunk.js.map": "/smartq-react/static/js/102.001fdd16.chunk.js.map",
@@ -30,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.ba7b9bf3.css",
-    "static/js/main.a33aa906.js"
+    "static/js/main.c4318d6d.js"
   ]
 }
