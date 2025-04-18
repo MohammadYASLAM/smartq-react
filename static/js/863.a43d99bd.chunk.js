@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunksmartq_react=self.webpackChunksmartq_react||[]).push([[863],{863:(a,e,s)=>{s.r(e),s.d(e,{default:()=>c});s(43);var r=s(579);const c=()=>(0,r.jsx)("div",{className:"container",children:(0,r.jsx)("h2",{children:"Hope you had a great service! Have a good day! :)"})})}}]);
-//# sourceMappingURL=863.a43d99bd.chunk.js.map
