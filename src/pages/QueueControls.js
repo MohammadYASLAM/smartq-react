@@ -9,35 +9,50 @@ import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.11.1/f
 import QRCodeGenerator from '../components/QRCodeGenerator';
 
 const QueueControls = () => {
+  //Component state variables
   const [queues, setQueues] = useState([]);
   const [queueName, setQueueName] = useState('');
   const [loading, setLoading] = useState(true);
-  const [actionPending, setActionPending] = useState({}); // to track pending operations on a queue
-  const navigate = useNavigate();
-  const queueCollection = collection(db, "queues");
+  const [actionPending, setActionPending] = useState({}); // to track pending operations on a queue (pasue/next/delete)
+  const navigate = useNavigate();   // For page navigation
+  const queueCollection = collection(db, "queues");  // Reference to the "queues" collection in firestore
 
+
+  //useEffect: runs once on mount to check auth & subscribe to queues
   useEffect(() => {
+
+    //Listen for auth state changes (login/logout)
     const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
       if (user) {
+        //If logged in, query this admin’s queues
         const q = query(queueCollection, where("adminId", "==", user.uid));
+        //Subscribe to real-time updates on that query
         const unsubscribe = onSnapshot(q, (snapshot) => {
+          // Map docs to JS objects with id + data fields
           const allQueues = snapshot.docs.map(docSnap => ({ id: docSnap.id, ...docSnap.data() }));
-          setQueues(allQueues);
-          setLoading(false);
+          setQueues(allQueues);  // Update state with the latest queues
+          setLoading(false);    // Data loaded, turn off loading indicator
         });
-        return () => unsubscribe();
+        return () => unsubscribe();  // Clean up Firestore listener on unmount
       } else {
+
+        //if not login in? redirect to auth page
         navigate('/auth');
       }
     });
+    //Clean up auth listener on unmount
     return unsubscribeAuth;
   }, [navigate, queueCollection]);
 
+
+  //Function to create a new queue
   const createQueue = async (e) => {
-    e.preventDefault();
-    if (!queueName.trim()) return;
+    e.preventDefault();  // Prevent form from reloading the page
+    if (!queueName.trim()) return;  // Do nothing if the name input is empty
     try {
-      const user = auth.currentUser;
+      const user = auth.currentUser;  // Get current admin user
+
+      //Build the new queue object
       const newQueue = {
         name: queueName,
         adminId: user.uid,
@@ -47,14 +62,16 @@ const QueueControls = () => {
         estimatedWaitTime: 0,
         createdAt: new Date()
       };
-      await addDoc(queueCollection, newQueue);
-      setQueueName('');
+      await addDoc(queueCollection, newQueue);  // Save to Firestore
+      setQueueName('');                      // Clear the input box
     } catch (error) {
       console.error("Error creating queue:", error);
     }
   };
 
+  //Toggle between active & paused for a given queue
   const toggleQueueStatus = async (queueId, currentStatus) => {
+    // Mark action as pending (disable buttons)
     setActionPending(prev => ({ ...prev, [queueId]: true }));
     try {
       const queueDoc = doc(db, "queues", queueId);
@@ -63,9 +80,11 @@ const QueueControls = () => {
     } catch (error) {
       console.error(error);
     }
+    // Clear pending flag
     setActionPending(prev => ({ ...prev, [queueId]: false }));
   };
 
+  // Advance the queue to the next user
   const nextQueue = async (queueId) => {
     setActionPending(prev => ({ ...prev, [queueId]: true }));
     try {
@@ -78,14 +97,16 @@ const QueueControls = () => {
       // Reassign positions based on the sorted original order
       users.sort((a, b) => a.position - b.position);
       users = users.map((user, index) => ({ ...user, position: index }));
-      await updateDoc(queueDoc, { users });
+      await updateDoc(queueDoc, { users });  // Save updated user array
     } catch (error) {
       console.error(error);
     }
     setActionPending(prev => ({ ...prev, [queueId]: false }));
   };
 
+  //Delete a queue entirely
   const deleteQueue = async (queueId) => {
+    // Confirm with the admin before deleting
     if (!window.confirm("Are you sure you want to delete this queue? This action cannot be undone.")) return;
     setActionPending(prev => ({ ...prev, [queueId]: true }));
     try {
@@ -96,6 +117,7 @@ const QueueControls = () => {
     setActionPending(prev => ({ ...prev, [queueId]: false }));
   };
 
+  // Render the UI
   return (
     <div className="container">
       <h1>Queue Management</h1>
