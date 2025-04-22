@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# SMARTQ - Queue Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Idea (SmartQ: A Queue Management Web App):
 
-In the project directory, you can run:
+SmartQ is a React-based web application designed to address the common problem of inefficient queue management in service
+environments. Using third‑party APIs such as Firebase for real‑time
+database, authentication, and notifications, SmartQ allows businesses to
+create, manage, and monitor queues while providing customers with a
+seamless process to join queues via QR codes, view their estimated wait
+time, and track their position in real time.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Problem:
 
-### `npm test`
+A variety of service-focused businesses like a clinic, restaurant, or even
+a government office face challenges when it comes to controlling long
+queues and wait times because it could result in customer dissatisfaction
+. This ultimately leads to service launge inefficiency while wasting time,
+which is unproductive. SmartQ hopes to alleviate problems related to
+queues with an app that permits joining a queue digitally, allowing
+customers to monitor and join the queue from outside the premise,
+leading to reduced congestion and smoother service delivery. Properties
+like clinics, restaurants, and government offices tend to face challenges
+managing wait times, which often results in inefficient service and
+customer annoyance. SmartQ offer a digital approach to optimize the
+2 | P a g e
+queue system by enabling customers to digitally join queues, minimizing
+congestion and promoting better service overall.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Target users and how it will help them:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### - Businesses:
+Such users have the ability to control queues with relative ease through
+an intuitive admin dashboard, track the wait times of customers, and
+control the pace of service delivery as needed.
+### - Customers:
+The end users have the ability to join active queues by simply scanning
+QR codes, get real time insights about their current standing in the
+queue, and receive timely alerts notifying them that their time has come.
+Hence, the waiting time is reduced and greatly improves the user
+experience.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Paper Prototype/UI Mockups (HTML Pages):
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Landing Page](./images/landing-page.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2. Authentication Page (Login/Register)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Login/Registration Page](./images/login-page.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 3. Authentication Page (Register)
 
-## Learn More
+![Registration Page](./images/registre.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 4. Admin Dashboard
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![admin dashboard Page](./images/admin-dashboard.png)
 
-### Code Splitting
+## 5. Queue Controls (Admin management)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![queue control Page](./images/queue-control.png)
 
-### Analyzing the Bundle Size
+## 6. Join Queue Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![join queue Page](./images/join-queue.png)
 
-### Making a Progressive Web App
+## 7. Queue Status Page (for customers)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![queue Status Page](./images/queue-status-page.png)
 
-### Advanced Configuration
+## 8. Queue Paused Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![aqueue Paused page](image.png)
 
-### Deployment
+## 9. Invalid Queue Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![invalid queue page](image-1.png)
 
-### `npm run build` fails to minify
+## 10. Farewell Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Farewell Page](image-2.png)
